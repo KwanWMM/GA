@@ -1,0 +1,6 @@
+HELLO WORLD
+On branch master
+Changes not staged for commit:
+	modified:   test.txt
+
+no changes added to commit
