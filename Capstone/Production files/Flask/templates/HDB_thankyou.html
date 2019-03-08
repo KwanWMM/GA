@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title></title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+
+    <!-- additional styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='thankyou_stylesheet.css') }}">
+
+  </head>
+  <body>
+      <div class="container summary-section summary-text">
+        <h1 class="pt-2">Details of your home:</h1>
+
+        <!-- Return the retrieved address, and other details entered by the user -->
+        <ul>
+          <br>
+          <li>Address: {{user_add}}</li>
+          <li>Town: {{session['town']}}</li>
+          <li>Flat Model: {{session['flat_model']}}</li>
+          <li>Floor Area: {{session['floor_area']}} square metres</li>
+          <li>Storey: {{session['storey']}} </li>
+          <li>Lease remaining: {{session['lease_remaining']}} years</li>
+        </ul>
+      </div>
+
+      <!-- Section for showing suggested resale price -->
+      <div class="container price-section price-text flex-center">
+          <div class="col-9">
+            <h2>Suggested Resale Price:</h2>
+          </div>
+          <div class="col-3">
+            <h2>${{prediction}}</h2>
+          </div>
+      </div>
+
+      <div class="container table-section">
+        <div class='row'>
+          <div class='col-12 home-text mt-2'>
+            <h3>Past Transactions within 500m of your flat (as of last quarter)</h3>
+          <div>
+        </div>
+
+        <!-- Display table of houses sold within 500m of flat -->
+        <div class="row tablealign table mt-3 price-text">
+          {% for table in tables %}
+              {{ table|safe }}
+          {% endfor %}
+        </div>
+
+      </div>
+      <!-- Return button to go back to homepage -->
+      <div class="container mt-5 return-box">
+        <a class="btn btn-large btn-info return-btn" href="/">Return</a>
+      </div>
+
+  </body>
+
+</html>

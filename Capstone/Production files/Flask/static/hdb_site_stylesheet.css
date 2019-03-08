@@ -1,0 +1,78 @@
+
+.header-section {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 99;
+	top: 28px;
+}
+
+.header-settings{
+  color:white;
+  font-family: 'Raleway';
+  text-align: center;
+  background:#2e2e2f;
+  border-left:#db9a44 7px solid;
+  border-right:#db9a44 7px solid;
+}
+
+body{
+  color:White;
+  font-family: 'Raleway';
+}
+
+.set-bg {
+  background: url("TGIF_header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.hero-section {
+	height: 600px;
+}
+
+.search-bar{
+  border-radius: 0px/0px;
+  background:#2e2e2f;
+  margin-top: -25px;
+  border-left:#db9a44 7px solid;
+  border-right:#db9a44 7px solid;
+}
+
+.field-size input{
+  width: 12em;  height: 2em;
+  margin-top:-10px;
+}
+
+.dropdown-size select{
+  width: 12em;  height: 2em;
+  margin-top:-10px;
+}
+
+.submit-button input[type="submit"]{
+  background: #db9a44;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  border: 0;
+  width: 8em;  height: 3em;
+}
+
+
+
+.submit-space {
+  text-align: center;
+}
+
+.results-text{
+  color: white;
+}
+
+.results-section{
+  height:300px;
+  border-radius: 0px/0px;
+  background:#2e2e2f;
+  border-left:#db9a44 7px solid;
+  border-right:#db9a44 7px solid;
+}
