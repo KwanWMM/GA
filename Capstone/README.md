@@ -16,7 +16,7 @@ Hence,I wanted to build a model that would help people price their resale flats.
     <li>Deployment (local)</li>
 </ul>
     
-## Initia Dataset and Preliminary Modelling
+## Initial Dataset and Preliminary Modelling
 Using data from data.gov.sg, I started with a dataset of flats sold between January 2015 and the end of 2018. Given the timeframe of this project, I chose not to use data that was available from earlier periods as that would also introduce a time series problem of accounting for inflation. In addition, I planned to use geodata to supplement the data obtained about the flats, but going too far back would increase the inaccuracy of the geodata retrieved (amentites retrieved might not have been present during that time period)
 <br>
 <br>
